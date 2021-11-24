@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    All posts
+{% endblock %}
+
+{% block content %}
+    <h1>Here are my latest posts...</h1>
+    <ul>
+        {% for post in posts %}
+        <li><a href="">{{ post }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
