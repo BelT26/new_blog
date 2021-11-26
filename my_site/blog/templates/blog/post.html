@@ -1,11 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css_files %}
+<link href="{% static 'blog/post.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block title %}
     Post
 {% endblock %}
 
 {% block content %}
-    <h1>post_name</h1>
-    <h2>text</h2>
+{% include 'blog/includes/header.html' %}
+<section id="summary">
+    <h2>{{ post }}</h2>
+    <article>
+        <img src="" alt="">
+        <div>
+            <address>By Helen</address>
+            <p>Last updated <time>today</time></p>
+        </div>        
+    </article>
+</section>
+<main>
+    <p>{{ text }}</p>
+</main>
 {% endblock %}
